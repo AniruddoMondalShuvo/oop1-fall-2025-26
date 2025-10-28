@@ -1,0 +1,14 @@
+public class Average{
+    
+    public static void main(String[] arg){
+
+    byte firstStudent = 80;
+    byte secondStudent = 70;
+    byte thirdStudent = 90;
+    
+    float sum = firstStudent + secondStudent + thirdStudent;
+    float avg = sum / 3;
+    System.out.println("Average : " + avg);
+
+    }
+}
