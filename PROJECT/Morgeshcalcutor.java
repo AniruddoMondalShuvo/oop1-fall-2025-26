@@ -8,9 +8,9 @@ public class Morgeshcalcutor {
 
        Scanner input = new Scanner(System.in);
 
-       System.out.println("== Bangladesh Mortgage Calculator (BDT) ==");
+       System.out.println("== Mortgage Calculator ==");
 
-       System.out.print("Enter loan amount (Principal in BDT): ");
+       System.out.print("Enter loan amount: ");
 
        double principal = input.nextDouble();
 
@@ -21,10 +21,30 @@ public class Morgeshcalcutor {
        System.out.print("Enter loan period (in years): ");
 
        int years = input.nextInt();
-       
 
+       double monthlyInterestRate = (annualInterestRate / 100) / 12;
 
+       int numberOfPayments = years * 12;
+
+       double monthlyPayment = (principal * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments))
+
+               / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
+
+       double totalPayment = monthlyPayment * numberOfPayments;
+
+       double totalInterest = totalPayment - principal;
+
+   
    }
+
+}
+ 
+
+
+
+
+
+   
 
 
  
@@ -41,6 +61,6 @@ public class Morgeshcalcutor {
 
 
 
-    }
+    
     
 
