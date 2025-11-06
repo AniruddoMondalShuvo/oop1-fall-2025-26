@@ -8,10 +8,34 @@ public class MortgageCalculator {
 
     public static void main(String[] args) {
 
+    Scanner scanner = new Scanner(System.in);
 
+    System.out.println("Enter Basic Salary: ");
+    double basic = scanner.nextDouble();
 
+    if(basic.nextDouble){
 
+        System.out.println("This the amount");
+    }
+    else(){
 
+        System.out.println("Enter only Numbers");
+    }
+
+    System.out.println("Enter Credit :"); 
+    double Credit = scanner.nextDouble();
+
+    if(Credit < 300 && Credit > 0){
+        System.out.println("No Access");
+    }
+    else(Credit < 500 && Credit > 300){
+
+        System.out.println("Access");
+    }
+    
+    Systrem.out.println("Enter Criminal Record :");
+     
+    Boolean record = scanner.netBoolean;
 
 
 
@@ -19,11 +43,10 @@ public class MortgageCalculator {
 
 
         
-        Scanner scanner = new Scanner(System.in);
 
         System.out.println("=== Bangladesh Mortgage Calculator (BDT) ===");
 
-        // Input: principal, annual interest rate, period in years
+        
         System.out.print("Enter loan amount (Principal in BDT): ");
         double principal = scanner.nextDouble();
 
@@ -33,20 +56,20 @@ public class MortgageCalculator {
         System.out.print("Enter loan period (in years): ");
         int years = scanner.nextInt();
 
-        // Convert annual interest rate to monthly and years to months
+        
         double monthlyInterestRate = (annualInterestRate / 100) / 12;
         int numberOfPayments = years * 12;
 
-        // Calculate monthly mortgage payment
+       
         double mortgagePayment = principal
                 * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, numberOfPayments))
                 / (Math.pow(1 + monthlyInterestRate, numberOfPayments) - 1);
 
-        // Calculate total payment and interest
+
         double totalPayment = mortgagePayment * numberOfPayments;
         double totalInterest = totalPayment - principal;
 
-        // Format results for Bangladeshi currency
+        
         Locale bdLocale = Locale.of("en", "BD");
         NumberFormat currencyFormatter = NumberFormat.getCurrencyInstance(bdLocale);
 
