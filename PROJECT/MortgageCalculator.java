@@ -13,29 +13,53 @@ public class MortgageCalculator {
     System.out.println("Enter Basic Salary: ");
     double basic = scanner.nextDouble();
 
-    if(basic.nextDouble){
+    if(scanner.hasNextDouble()){
 
         System.out.println("This the amount");
     }
-    else(){
-
+    else{
         System.out.println("Enter only Numbers");
+        scanner.next();
     }
 
     System.out.println("Enter Credit :"); 
     double Credit = scanner.nextDouble();
 
-    if(Credit < 300 && Credit > 0){
+    if(Credit > 0 && Credit < 300){
         System.out.println("No Access");
     }
-    else(Credit < 500 && Credit > 300){
+    else if(Credit > 300 && Credit < 500){
 
         System.out.println("Access");
     }
-    
-    Systrem.out.println("Enter Criminal Record :");
+    else {
+        System.out.println("Invalid Credit Amount");
+    }
+    System.out.println("Enter Criminal Record :");
      
-    Boolean record = scanner.netBoolean;
+    boolean record = scanner.nextBoolean();
+
+
+
+
+    String message;
+    while(true){
+        System.out.println(message);
+        if(scanner.hasNextDouble()){
+
+            System.out.print(scanner.nextDouble());
+        }
+    
+    else{
+        System.out.println("Invaid input");
+        scanner.next();
+    }
+    }
+
+
+
+
+   
 
 
 
