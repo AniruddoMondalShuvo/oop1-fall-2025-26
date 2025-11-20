@@ -1,0 +1,11 @@
+public class Discount {
+public static void main(String[] arg){
+
+double originalprice = 250;
+double discountpercent =15;
+double discountamount = (discountpercent/100) * originalprice;
+double finalprice = originalprice - discountamount;
+
+System.out.println("Final price after " + discountpercent + " % dicount is: $" + finalprice);
+
+}
