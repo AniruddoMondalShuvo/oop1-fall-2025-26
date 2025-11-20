@@ -1,0 +1,31 @@
+public class Task2 {
+    public static void main(String [] args){
+
+    String firstname = "Aniruddo";
+    String lastname  = "Shuvo";
+    String concaString = firstname + lastname;
+
+    System.out.println("Full Name :" +concaString);
+
+    String productname = "Asus";
+    String id ="20001";
+   String concaString1 = productname + id;
+    System.out.println("Product Name & ID is :" +concaString1);
+
+    String username ="aniruddoshuvo";
+    System.out.println(username +"@gamil.com");
+
+    String message  = "Discipline";
+    System.out.println("The totals number of characters :" + message.length());
+
+    String sentence1 = "change yourself".toUpperCase();
+    System.out.println("Uppercase sentence:" + sentence1);
+
+    String sentence2 = "FOLLOW SINCERITY".toLowerCase();
+    System.out.println("Lowercase Sentence:" + sentence2);
+
+    String replaString= "A".replace("A", "Time");
+    System.out.println("Replaced String: " + replaString);
+    }
+
+}
